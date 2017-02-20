@@ -8,7 +8,7 @@ else:
 
 if not os.path.exists('C:\\temprel'):
 	os.makedirs("c:\\temprel")
-with open("C:\\temprel\\pro.txt") as f:
+with open("C:\\temprel\pro.txt") as f:
         file = f.read()
 
 message = """
