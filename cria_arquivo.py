@@ -1,7 +1,7 @@
 import platform, os
 
 
-if platform.release == "XP":
+if platform.release() == "XP":
 	os.system("WMIC /output:C:\\temp\pro.txt product get name, version, installdate")
 else:
 	os.system("Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, InstallDate | Sort-Object -Property DisplayName -Unique | 	Format-Table -AutoSize > c:\\temp\\pro.txt")
