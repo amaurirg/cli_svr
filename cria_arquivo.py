@@ -33,6 +33,7 @@ file)
 # 	file = f.read()
 
 if  not os.path.exists('C:\\teste'):
-	with open("c:\\tem\\relatorio.txt", "w") as w:
+	os.makedirs("c:\\teste")
+	with open("c:\\teste\\relatorio.txt", "w") as w:
 		w.write(message)
 
