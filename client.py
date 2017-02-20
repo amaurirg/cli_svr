@@ -9,21 +9,22 @@ serverport = 50006
 
 # message = ["Olá Mundo!"]
 message = """
-        Nome do computador: {0}
-        Sistema: {1}
-        Versão: {2}
-        Plataforma: {3}
-        Máquina: {4}
-        Arquitetura: {5}
-        Processador: {6}
-        """ \
-        .format(platform.node(),
-                platform.system(),
-                platform.release(),
-                platform.platform(),
-                platform.machine(),
-                platform.architecture(),
-                platform.processor())
+Nome do computador: {0}
+Sistema: {1}
+Versão: {2}
+Plataforma: {3}
+Máquina: {4}
+Arquitetura: {5}
+Processador: {6}
+================================================================================""" \
+.format(
+platform.node(),
+platform.system(),
+platform.release(),
+platform.platform(),
+platform.machine(),
+platform.architecture(),
+platform.processor())
 
 # if len(sys.argv)>1:
 # 	serverhost = sys.argv[1]
