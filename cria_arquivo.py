@@ -1,12 +1,9 @@
-# coding: utf-8
-
-import sys, platform, os
+import platform, os
 
 
 os.system("WMIC /output:C:\\temp\pro.txt product get name, version, installdate")
 with open("C:\\temp\\pro.txt") as f:
         file = f.read()
-
 
 message = """
 Nome do computador: {0}
@@ -17,9 +14,7 @@ Máquina: {4}
 Arquitetura: {5}
 Processador: {6}\n
 Programas Instalados: \n{7}
-===============================================================================
-""" \
-.format(
+""".format(
 platform.node(),
 platform.system(),
 platform.release(),
@@ -29,11 +24,8 @@ platform.architecture(),
 platform.processor(),
 file)
 
-# with open("teste2.txt") as f:
-# 	file = f.read()
-
-if  not os.path.exists('C:\\teste'):
+if not os.path.exists('C:\\teste'):
 	os.makedirs("c:\\teste")
-	with open("c:\\teste\\relatorio.txt", "w") as w:
-		w.write(message)
+with open("c:\\teste\\relatorio.txt", "w") as w:
+	w.write(message)
 
