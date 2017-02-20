@@ -7,7 +7,7 @@ if not os.path.exists('C:\\temprel'):
 if platform.release() == "XP":
 	os.system("WMIC /output:C:\\temprel\pro.txt product get name, version, installdate")
 else:
-	os.system("Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, InstallDate | Sort-Object -Property DisplayName -Unique | Format-Table -AutoSize > c:\\temprel\pro.txt")
+	os.system("Get-ItemProperty HKLM:\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | Select-Object DisplayName, DisplayVersion, InstallDate | Sort-Object -Property DisplayName -Unique | Format-Table -AutoSize > c:\\temprel\pro.txt")
 
 
 with open("C:\\temprel\\pro.txt") as f:
