@@ -2,12 +2,12 @@ import platform, os
 
 
 # if platform.release() == "XP":
-os.system("WMIC /output:C:\\temprel\\pro.txt product get name, version, installdate")
+# os.system("WMIC /output:C:\\temprel\\pro.txt product get name, version, installdate")
 # else:
 # 	os.system("Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, InstallDate | Sort-Object -Property DisplayName -Unique | Format-Table -AutoSize > c:\\temprel\pro.txt")
 
-if not os.path.exists('C:\\temprel'):
-	os.makedirs("c:\\temprel")
+os.system("WMIC /output:C:\\temprel\pro.txt product get name, version, installdate")
+
 with open("C:\\temprel\\pro.txt") as f:
         file = f.read()
 
@@ -30,8 +30,8 @@ platform.architecture(),
 platform.processor(),
 file)
 
-if not os.path.exists('C:\\teste'):
-	os.makedirs("c:\\teste")
-with open("c:\\teste\\relatorio.txt", "w") as w:
+if not os.path.exists('C:\\relpc'):
+	os.makedirs("c:\\relpc")
+with open("c:\\relpc\\relatorio.txt", "w") as w:
 	w.write(message)
 
