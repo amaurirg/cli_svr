@@ -1,0 +1,12 @@
+
+Nome do computador: amauri-note
+Sistema: Linux
+Versão: 4.4.0-62-generic
+Plataforma: Linux-4.4.0-62-generic-x86_64-with-Ubuntu-16.04-xenial
+Máquina: x86_64
+Arquitetura: ('64bit', 'ELF')
+Processador: x86_64
+
+Programas Instalados: 
+<type 'file'>
+===============================================================================
